@@ -1,6 +1,6 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
-import '../constants.dart';
+import '../../constants.dart';
 
 class HourHand extends StatelessWidget {
   HourHand({
