@@ -9,12 +9,12 @@ class SettingSwitchRow extends StatelessWidget {
 
   final String title;
   final bool value;
-  final Function onChanged;
+  final Function(bool) onChanged;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 5.0),
+      padding: const EdgeInsets.only(top: 0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
@@ -28,10 +28,7 @@ class SettingSwitchRow extends StatelessWidget {
           CupertinoSwitch(
             value: this.value,
             activeColor: kPrimaryPurpleColor,
-            onChanged: (bool newValue) {
-              // return the new value
-              this.onChanged();
-            },
+            onChanged: this.onChanged,
           )
         ],
       ),
