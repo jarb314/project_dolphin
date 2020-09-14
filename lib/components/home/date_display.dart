@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../constants.dart';
+import '../../constants.dart';
 
 class DateDisplay extends StatelessWidget {
   DateDisplay({this.date});
