@@ -1,12 +1,18 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:project_dolphin/components/alarm_setting.dart';
-import 'package:project_dolphin/components/appbar.dart';
-import 'package:project_dolphin/components/base/raised_circular_button.dart';
+import 'package:project_dolphin/components/alarms/add_alarm_button.dart';
+import 'package:project_dolphin/components/alarms/alarm_setting.dart';
+import 'package:project_dolphin/components/base/appbar.dart';
+import 'package:project_dolphin/constants.dart';
 
-import '../constants.dart';
+class AlarmsScreen extends StatefulWidget {
+  @override
+  _AlarmsScreenState createState() => _AlarmsScreenState();
+}
 
-class AlarmsScreen extends StatelessWidget {
+class _AlarmsScreenState extends State<AlarmsScreen> {
+  List<bool> alarmStateList = [false, false, false];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,41 +26,26 @@ class AlarmsScreen extends StatelessWidget {
             Flexible(
               child: SingleChildScrollView(
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: <Widget>[
                     ListView.builder(
                       shrinkWrap: true,
                       physics: NeverScrollableScrollPhysics(),
-                      itemCount: 10,
+                      itemCount: alarmStateList.length,
                       itemBuilder: (context, index) {
                         return AlarmSetting(
-                          value: false,
-                          onChanged: () {},
+                          isGoal: index == 0, // Set the first alarm to Goal
+                          // (just for demo)
+                          value: alarmStateList[index],
+                          onChanged: (newValue) {
+                            setState(() {
+                              alarmStateList[index] = newValue;
+                            });
+                          },
                         );
                       },
                     ),
-                    Align(
-                      alignment: Alignment.centerRight,
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 40.0,
-                          vertical: 0.0,
-                        ),
-                        child: RaisedCircularButton(
-                          child: Container(
-                            margin: EdgeInsets.all(5.0),
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              color: kPrimaryPurpleColor,
-                            ),
-                            child: Icon(
-                              CupertinoIcons.add,
-                              color: Colors.white,
-                              size: 30.0,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
+                    AddAlarmButton(),
                     SizedBox(height: 40.0),
                   ],
                 ),
