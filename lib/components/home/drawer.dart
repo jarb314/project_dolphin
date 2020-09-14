@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../constants.dart';
-import 'base/raised_circular_button.dart';
+import '../../constants.dart';
+import '../base/icon_circular_button.dart';
 
 class MyDrawer extends StatelessWidget {
   MyDrawer({this.reset});
@@ -14,22 +14,18 @@ class MyDrawer extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
-        RaisedCircularButton(
+        IconCircularButton(
           padding: EdgeInsets.symmetric(
             vertical: 15.0,
             horizontal: 8.0,
           ),
-          child: Icon(
-            Icons.alarm,
-            color: kPrimaryPurpleColor,
-            size: 30.0,
-          ),
+          icon: Icons.alarm,
           onTap: () {
             Navigator.pushNamed(context, '/alarms');
             reset();
           },
         ),
-        RaisedCircularButton(
+        IconCircularButton(
           padding: EdgeInsets.symmetric(
             vertical: 15.0,
             horizontal: 8.0,
@@ -39,31 +35,23 @@ class MyDrawer extends StatelessWidget {
             //reset();
           },
         ),
-        RaisedCircularButton(
+        IconCircularButton(
           padding: EdgeInsets.symmetric(
             vertical: 15.0,
             horizontal: 8.0,
           ),
-          child: Icon(
-            CupertinoIcons.gear_solid,
-            color: kPrimaryPurpleColor,
-            size: 30.0,
-          ),
+          icon: CupertinoIcons.gear_solid,
           onTap: () {
             Navigator.pushNamed(context, '/settings');
             reset();
           },
         ),
-        RaisedCircularButton(
+        IconCircularButton(
           padding: EdgeInsets.symmetric(
             vertical: 15.0,
             horizontal: 8.0,
           ),
-          child: Icon(
-            Icons.info,
-            color: kPrimaryPurpleColor,
-            size: 30.0,
-          ),
+          icon: Icons.info,
           onTap: () {
             // Navigator code...
             //reset();
