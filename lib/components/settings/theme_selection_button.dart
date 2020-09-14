@@ -68,7 +68,7 @@ class _ThemeSelectionButtonState extends State<ThemeSelectionButton> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.all(8.0),
+      padding: EdgeInsets.zero,
       child: GestureDetector(
         onTapDown: (TapDownDetails) {
           setState(() {
@@ -84,6 +84,7 @@ class _ThemeSelectionButtonState extends State<ThemeSelectionButton> {
         child: Stack(
           children: [
             RaiseCircleContainer(
+              radius: 60.0,
               shadowOffset: shadow,
               child: Container(
                 margin: EdgeInsets.all(7.0),
