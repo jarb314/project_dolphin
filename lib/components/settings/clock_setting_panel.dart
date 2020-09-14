@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:project_dolphin/components/setting_switch_row.dart';
+import 'package:project_dolphin/components/settings/setting_switch_row.dart';
 
-import '../constants.dart';
-import 'base/raise_container.dart';
+import '../../constants.dart';
+import '../base/raise_container.dart';
 
 class ClockSettingPanel extends StatefulWidget {
   @override
