@@ -7,10 +7,12 @@ class ThemeSelectionPanel extends StatefulWidget {
 }
 
 class _ThemeSelectionPanelState extends State<ThemeSelectionPanel> {
+  // TODO: Implement method to switch the state of the button;
+
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(15.0),
+      padding: const EdgeInsets.symmetric(horizontal: 30.0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
