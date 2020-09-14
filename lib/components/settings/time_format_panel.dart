@@ -16,6 +16,9 @@ class _TimeFormatPanelState extends State<TimeFormatPanel> {
   @override
   void initState() {
     //TODO: get the time format setting from the DB
+    // Dummy data;
+    format24 = true;
+    format12 = false;
     super.initState();
   }
 
@@ -38,13 +41,33 @@ class _TimeFormatPanelState extends State<TimeFormatPanel> {
           ),
           SettingSwitchRow(
             title: '24 HOURS',
-            value: true,
-            onChanged: () {},
+            value: format24,
+            onChanged: (newValue) {
+              setState(() {
+                if (newValue) {
+                  format12 = false;
+                  format24 = true;
+                } else {
+                  format12 = true;
+                  format24 = false;
+                }
+              });
+            },
           ),
           SettingSwitchRow(
             title: '12 HOURS',
-            value: false,
-            onChanged: () {},
+            value: format12,
+            onChanged: (newValue) {
+              setState(() {
+                if (!newValue) {
+                  format12 = false;
+                  format24 = true;
+                } else {
+                  format12 = true;
+                  format24 = false;
+                }
+              });
+            },
           ),
         ],
       ),
