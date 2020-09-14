@@ -1,13 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/animation.dart';
-import 'package:project_dolphin/components/alarms_listview.dart';
-import 'package:project_dolphin/components/analog_clock.dart';
-import 'package:project_dolphin/components/base/raised_circular_button.dart';
-import 'package:project_dolphin/components/date_display.dart';
-import 'package:project_dolphin/components/digital_clock.dart';
-import 'package:project_dolphin/components/drawer.dart';
-import 'package:project_dolphin/components/goal_info_display.dart';
+import 'package:project_dolphin/components/home/alarms_listview.dart';
+import 'package:project_dolphin/components/home/analog_clock.dart';
+import 'package:project_dolphin/components/base/icon_circular_button.dart';
+import 'package:project_dolphin/components/home/date_display.dart';
+import 'package:project_dolphin/components/home/digital_clock.dart';
+import 'package:project_dolphin/components/home/drawer.dart';
+import 'package:project_dolphin/components/home/goal_info_display.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -61,10 +61,8 @@ class _HomeScreenState extends State<HomeScreen>
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: <Widget>[
-                    RaisedCircularButton(
-                      child: Icon(
-                        showMenu ? CupertinoIcons.forward : Icons.menu,
-                      ),
+                    IconCircularButton(
+                      icon: showMenu ? CupertinoIcons.forward : Icons.menu,
                       onTap: () {
                         if (showMenu) {
                           controller.reverse();
