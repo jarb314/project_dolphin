@@ -1,10 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:project_dolphin/components/appbar.dart';
-import 'package:project_dolphin/components/clean_ui_panel.dart';
-import 'package:project_dolphin/components/clock_setting_panel.dart';
-import 'package:project_dolphin/components/theme_selection_panel.dart';
-import 'package:project_dolphin/components/time_format_panel.dart';
+import 'package:project_dolphin/components/base/appbar.dart';
+import 'package:project_dolphin/components/settings/clean_ui_panel.dart';
+import 'package:project_dolphin/components/settings/clock_setting_panel.dart';
+import 'package:project_dolphin/components/settings/theme_selection_panel.dart';
+import 'package:project_dolphin/components/settings/time_format_panel.dart';
 
 class SettingsScreen extends StatelessWidget {
   @override
