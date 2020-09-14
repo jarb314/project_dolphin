@@ -10,6 +10,8 @@ class ClockSettingPanel extends StatefulWidget {
 }
 
 class _ClockSettingPanelState extends State<ClockSettingPanel> {
+  // TODO: implemente method to change the state of the switch.
+
   @override
   Widget build(BuildContext context) {
     return RaisedContainer(
@@ -28,12 +30,12 @@ class _ClockSettingPanelState extends State<ClockSettingPanel> {
           SettingSwitchRow(
             title: 'HOLLOW CLOCK',
             value: false,
-            onChanged: () {},
+            onChanged: (newValue) {},
           ),
           SettingSwitchRow(
             title: 'LOW CLOCK',
             value: true,
-            onChanged: () {},
+            onChanged: (newValue) {},
           ),
         ],
       ),
