@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:project_dolphin/components/theme_selection_button.dart';
+import 'package:project_dolphin/components/settings/theme_selection_button.dart';
 
 class ThemeSelectionPanel extends StatefulWidget {
   @override
