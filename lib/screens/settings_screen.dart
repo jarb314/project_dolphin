@@ -18,7 +18,7 @@ class SettingsScreen extends StatelessWidget {
             Expanded(
               child: Padding(
                 padding: const EdgeInsets.symmetric(
-                  horizontal: 50.0,
+                  horizontal: 40.0,
                   vertical: 40.0,
                 ),
                 child: Column(
