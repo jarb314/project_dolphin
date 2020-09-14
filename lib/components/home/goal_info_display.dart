@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../constants.dart';
-import 'base/raise_container.dart';
+import '../../constants.dart';
+import '../base/raise_container.dart';
 
 class GoalInfoDisplay extends StatelessWidget {
   @override
