@@ -10,6 +10,15 @@ class CleanUIPanel extends StatefulWidget {
 }
 
 class _CleanUIPanelState extends State<CleanUIPanel> {
+  bool isCleanUI;
+
+  @override
+  void initState() {
+    // TODO: Get data from db
+    isCleanUI = false; // Dummy data
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return RaisedContainer(
@@ -26,9 +35,13 @@ class _CleanUIPanelState extends State<CleanUIPanel> {
             style: kSubtitleTextStyle,
           ),
           SettingSwitchRow(
-            value: true,
+            value: isCleanUI,
             title: 'HIDE THE EXTRA INFO ON THE HOME SCREEN',
-            onChanged: () {},
+            onChanged: (newValue) {
+              setState(() {
+                isCleanUI = newValue;
+              });
+            },
           ),
         ],
       ),
