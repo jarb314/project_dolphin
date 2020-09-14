@@ -1,10 +1,10 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:project_dolphin/components/seconds_hand.dart';
+import 'package:project_dolphin/components/home/seconds_hand.dart';
 
-import 'base/lower_circle_container.dart';
-import 'base/raise_circle_container.dart';
+import '../base/lower_circle_container.dart';
+import '../base/raise_circle_container.dart';
 import 'hour_hand.dart';
 import 'minutes_hand.dart';
 
