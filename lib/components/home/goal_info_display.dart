@@ -67,7 +67,7 @@ class ProgressBarIndicator extends StatelessWidget {
         SizedBox(height: 5.0),
         Text(
           '23%',
-          style: kTitleTextStyle.copyWith(
+          style: kSubtitleTextStyle.copyWith(
             color: kPrimaryPurpleColor,
           ),
         ),
