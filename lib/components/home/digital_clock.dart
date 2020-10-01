@@ -28,14 +28,14 @@ class _DigitalClockState extends State<DigitalClock> {
     int minute = dateTime.minute;
 
     if (hour == 0) {
-      hour = 12;
+      hour = 24;
     }
 
-    if (minute < 10 && hour > 10) {
+    if (hour >= 10 && minute < 10) {
       return '$hour.0$minute';
-    } else if (minute > 10 && hour < 10) {
+    } else if (hour < 10 && minute >= 10) {
       return '0$hour.$minute';
-    } else if (minute < 10 && hour < 10) {
+    } else if (hour < 10 && minute < 10) {
       return '0$hour.0$minute';
     } else {
       return '$hour.$minute';
