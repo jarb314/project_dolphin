@@ -8,6 +8,8 @@ import 'package:project_dolphin/components/home/date_display.dart';
 import 'package:project_dolphin/components/home/digital_clock.dart';
 import 'package:project_dolphin/components/home/drawer.dart';
 import 'package:project_dolphin/components/home/goal_info_display.dart';
+import 'package:feather_icons_flutter/feather_icons_flutter.dart';
+import 'package:project_dolphin/jarbis_icons_icons.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -62,7 +64,8 @@ class _HomeScreenState extends State<HomeScreen>
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: <Widget>[
                     IconCircularButton(
-                      icon: showMenu ? CupertinoIcons.forward : Icons.menu,
+                      icon:
+                          showMenu ? FeatherIcons.arrowRight : JarbisIcons.menu,
                       onTap: () {
                         if (showMenu) {
                           controller.reverse();
