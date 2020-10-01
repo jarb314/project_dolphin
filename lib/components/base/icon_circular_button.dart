@@ -1,3 +1,4 @@
+import 'package:feather_icons_flutter/feather_icons_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:project_dolphin/constants.dart';
 
@@ -30,7 +31,7 @@ class _IconCircularButtonState extends State<IconCircularButton> {
           padding: EdgeInsets.zero,
           onPressed: widget.onTap,
           child: Icon(
-            widget.icon ?? Icons.error_outline,
+            widget.icon ?? FeatherIcons.alertCircle,
             size: 30.0,
             color: widget.color ?? kPrimaryPurpleColor,
           ),
