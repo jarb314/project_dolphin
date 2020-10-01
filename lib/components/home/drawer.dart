@@ -1,3 +1,4 @@
+import 'package:feather_icons_flutter/feather_icons_flutter.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -19,7 +20,7 @@ class MyDrawer extends StatelessWidget {
             vertical: 15.0,
             horizontal: 8.0,
           ),
-          icon: Icons.alarm,
+          icon: FeatherIcons.clock, // TODO: set project icon
           onTap: () {
             Navigator.pushNamed(context, '/alarms');
             reset();
@@ -30,6 +31,7 @@ class MyDrawer extends StatelessWidget {
             vertical: 15.0,
             horizontal: 8.0,
           ),
+          icon: FeatherIcons.target,
           onTap: () {
             // Navigator code...
             //reset();
@@ -40,7 +42,7 @@ class MyDrawer extends StatelessWidget {
             vertical: 15.0,
             horizontal: 8.0,
           ),
-          icon: CupertinoIcons.gear_solid,
+          icon: FeatherIcons.settings,
           onTap: () {
             Navigator.pushNamed(context, '/settings');
             reset();
@@ -51,10 +53,10 @@ class MyDrawer extends StatelessWidget {
             vertical: 15.0,
             horizontal: 8.0,
           ),
-          icon: Icons.info,
+          icon: FeatherIcons.info,
           onTap: () {
-            // Navigator code...
-            //reset();
+            Navigator.pushNamed(context, '/about');
+            reset();
           },
         ),
       ],
