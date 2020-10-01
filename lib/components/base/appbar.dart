@@ -1,3 +1,4 @@
+import 'package:feather_icons_flutter/feather_icons_flutter.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../../constants.dart';
@@ -14,9 +15,9 @@ class MyAppbar extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: <Widget>[
         IconButton(
-          padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 10.0),
+          padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
           icon: Icon(
-            CupertinoIcons.back,
+            FeatherIcons.arrowLeft,
             size: 30.0,
           ),
           onPressed: () {
@@ -24,7 +25,7 @@ class MyAppbar extends StatelessWidget {
           },
         ),
         Padding(
-          padding: const EdgeInsets.only(right: 20.0),
+          padding: const EdgeInsets.only(right: 30.0),
           child: Text(
             title ?? 'missing',
             style: kHeaderTextStyle,
