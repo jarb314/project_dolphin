@@ -18,7 +18,7 @@ class _AboutScreenState extends State<AboutScreen> {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             MyAppbar(
-              title: 'About',
+              title: 'ABOUT',
             ),
             Expanded(
               child: Padding(
