@@ -33,8 +33,8 @@ class MyDrawer extends StatelessWidget {
           ),
           icon: FeatherIcons.target,
           onTap: () {
-            // Navigator code...
-            //reset();
+            Navigator.pushNamed(context, '/goal');
+            reset();
           },
         ),
         IconCircularButton(
