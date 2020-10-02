@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_statusbarcolor/flutter_statusbarcolor.dart';
 import 'package:project_dolphin/screens/about_screen.dart';
 import 'package:project_dolphin/screens/alarms_screen.dart';
+import 'package:project_dolphin/screens/goal_screen.dart';
 import 'package:project_dolphin/screens/home_screen.dart';
 import 'package:project_dolphin/screens/settings_screen.dart';
 
@@ -25,6 +26,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => HomeScreen(),
         '/alarms': (context) => AlarmsScreen(),
+        '/goal': (context) => GoalScren(),
         '/settings': (context) => SettingsScreen(),
         '/about': (context) => AboutScreen(),
       },
